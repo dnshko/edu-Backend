@@ -25,11 +25,11 @@ SECRET_KEY = '99&yl(&(ft6ic5fszvm6$4i*mp16b$zeg^e^y^k%l^q)fzy)=m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 AUTH_USER_MODEL = 'accounts.User' 
 
-CORS_ORIGIN_ALLOW_ALL = True
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -135,4 +135,9 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (
     os.path.join(BASE_DIR)
+)
+
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000','http://localhost:3001',
 )
